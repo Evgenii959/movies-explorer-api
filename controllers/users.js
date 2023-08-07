@@ -1,7 +1,6 @@
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const User = require('../models/user');
-const Error400 = require('../errors/error400');
 const Error401 = require('../errors/error401');
 const Error404 = require('../errors/error404');
 const Error409 = require('../errors/error409');
@@ -55,8 +54,8 @@ const updateUser = (req, res, next) => {
   )
     .then((newUser) => res.status(ERROR_CODES.OK).send(newUser))
     .catch((err) => {
-      if (err.name === 'ValidationError') {
-        next(new Error400('Переданы не корректные данные'));
+      if (err.code === 11000) {
+        next(new Error409('Такой email уже существует'));
       } else {
         next(err);
       }

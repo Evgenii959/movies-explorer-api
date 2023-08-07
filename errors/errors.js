@@ -6,6 +6,7 @@ const codeMessage = {
   falseData: 'Переданы некорректные данные',
   cardNotFound: 'Card not found',
   falseAdress: 'Неверный адрес',
+  RATE_LIMIT: 'Превышено количество запросов с вашего IP',
 };
 
 const ERROR_CODES = {

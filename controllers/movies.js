@@ -33,11 +33,7 @@ const deleteMovie = async (req, res, next) => {
     await Movie.findByIdAndRemove(movieId);
     res.send(movie);
   } catch (error) {
-    if (error.name === 'CastError') {
-      next(new Error400('false ID'));
-    } else {
-      next(error);
-    }
+    next(error);
   }
 };
 
