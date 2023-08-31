@@ -11,6 +11,7 @@ const {
   updateUser,
   login,
   getCurentUser,
+  signOut,
 } = require('../controllers/users');
 
 router.post('/signup', celebrate(userValid), createUser);
@@ -21,4 +22,5 @@ router.get('/users/me', authMiddle, getCurentUser);
 
 router.patch('/users/me', authMiddle, celebrate(userValidUpdate), updateUser);
 
+router.get('/signout', authMiddle, signOut);
 module.exports = router;

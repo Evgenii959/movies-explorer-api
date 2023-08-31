@@ -86,9 +86,18 @@ const createUser = async (req, res, next) => {
   }
 };
 
+const signOut = async (req, res, next) => {
+  try {
+    res.clearCookie('jwt').send({ message: 'Вы успешно вышли' });
+  } catch (error) {
+    next(error);
+  }
+};
+
 module.exports = {
   login,
   getCurentUser,
   updateUser,
   createUser,
+  signOut,
 };
