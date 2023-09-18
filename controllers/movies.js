@@ -41,7 +41,7 @@ const createMovie = async (req, res, next) => {
   try {
     const {
       country, director, duration, year, description,
-      image, trailerLink, thumbnail, movield, nameRU, nameEN,
+      image, trailerLink, thumbnail, movieId, nameRU, nameEN,
     } = req.body;
 
     const newMovie = await Movie.create({
@@ -54,7 +54,7 @@ const createMovie = async (req, res, next) => {
       image,
       trailerLink,
       thumbnail,
-      movield,
+      movieId,
       nameRU,
       nameEN,
     });

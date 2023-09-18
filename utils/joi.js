@@ -68,7 +68,7 @@ const movieValid = {
 const movieValidId = {
   [Segments.PARAMS]: Joi.object()
     .keys({
-      id: Joi.string().required().length(24).hex(),
+      movieId: Joi.string().required().length(24).hex(),
     })
     .messages({
       'string.empty': 'Строка не должна быть пустой',
