@@ -23,9 +23,9 @@ mongoose
 const app = express();
 app.use(
   cors({
-    origin: 'http://localhost:3001',
+    origin: "http://backend-evgeny.nomoredomains.sbs",
     credentials: true,
-  }),
+  })
 );
 
 app.use(helmet());
