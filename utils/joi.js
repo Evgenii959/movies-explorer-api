@@ -114,9 +114,9 @@ const userValidLogin = {
       'string.empty': 'Строка не должна быть пустой',
       'string.email': 'Некорректный email',
     }),
-    password: Joi.string().required().min(8).messages({
+    password: Joi.string().required().min(5).messages({
       'string.empty': 'Строка не должна быть пустой',
-      'string.min': 'минимальное количество символов 8',
+      'string.min': 'минимальное количество символов 5',
     }),
   }),
 };

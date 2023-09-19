@@ -24,6 +24,7 @@ const app = express();
 app.use(
   cors({
     origin: "https://frontend-evgeny.nomoredomains.sbs",
+/*     origin: "http://localhost:3001", */
     credentials: true,
   })
 );
