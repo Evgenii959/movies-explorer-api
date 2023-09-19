@@ -23,7 +23,7 @@ mongoose
 const app = express();
 app.use(
   cors({
-    origin: "https://backend-evgeny.nomoredomains.sbs",
+    origin: "https://frontend-evgeny.nomoredomains.sbs",
     credentials: true,
   })
 );
